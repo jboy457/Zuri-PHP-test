@@ -1,3 +1,27 @@
+<?php
+    session_start();
+    $error = [];
+    
+    if(array_key_exists('submit', $_POST)) {
+
+        // Valdiate inputs
+        if(empty($_POST['fname'])) {
+            $error['fname'] = 'Firstname is required';
+        } elseif (empty($_POST['lname'])) {
+            $error['lname'] = 'Lastname is required';
+        } elseif (empty($_POST['email'])) {
+            $error['email'] = 'Email is required';
+        } elseif (empty($_POST['phone'])) {
+            $error['phone'] = 'Phone is required';
+        } elseif (empty($_POST['pass'])) {
+            $error['pass'] = 'Password is required';
+        } else {
+
+        }
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
